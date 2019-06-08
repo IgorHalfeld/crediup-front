@@ -1,37 +1,38 @@
 <template>
   <div class="info">
-    <GridContainer
-      :direction="$mq({ maxWidth: '800px' }) ? 'column' : 'row'"
-      alignY="center"
-      alignX="center">
+    <GridContainer direction="column" alignY="center">
+      <StyledTitle>
+        E quais são as vantagens?
+      </StyledTitle>
       <GridContainer
-        :styles="{
-          margin: '35px',
-          maxWidth: '900px'
-        }"
-        :direction="$mq({ maxWidth: '880px' }) ? 'column' : 'row'"
-        alignX="space-between"
-        alignY="flex-start">
-        <ul class="info-list">
-          <li class="info-list-item" v-for="(item, index) in aboutList" :key="index">
-            <GridContainer direction="column" alignY="flex-start" alignX="center">
-              <strong class="info-list-item-highlight">{{ item.highlight }}</strong>
-              <GridContainer alignY="center">
-                <span>{{ item.emoji }}</span> {{ item.text }}
+        :direction="$mq({ maxWidth: '800px' }) ? 'column' : 'row'"
+        alignY="center"
+        alignX="center">
+        <GridContainer
+          :styles="{
+            margin: '35px',
+            maxWidth: '900px'
+          }"
+          :direction="$mq({ maxWidth: '880px' }) ? 'column' : 'row'"
+          alignX="space-between"
+          alignY="flex-start">
+          <ul class="info-list">
+            <li class="info-list-item" v-for="(item, index) in aboutList" :key="index">
+              <GridContainer direction="column" alignY="flex-start" alignX="center">
+                <strong class="info-list-item-highlight">{{ item.highlight }}</strong>
+                <GridContainer alignY="center">
+                  <span>{{ item.emoji }}</span> {{ item.text }}
+                </GridContainer>
               </GridContainer>
-            </GridContainer>
-          </li>
-        </ul>
-        <!-- <ul class="info-list">
-          <li>Se você não pode ver esta edição ao vivo, não tem problema! Todas as palestras ficarão gravadas no Youtube</li>
-          <li>Mas, assistir ao vivo te dá a possibilidade de perguntar diretamente para o palestrante (só dizendo 👀)</li>
-        </ul> -->
+            </li>
+          </ul>
+        </GridContainer>
+
+        <div class="info-card">
+          <img src="/card.png" />
+        </div>
+
       </GridContainer>
-
-      <div class="info-card">
-        <img src="/card.png" />
-      </div>
-
     </GridContainer>
   </div>
 </template>

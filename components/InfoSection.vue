@@ -26,10 +26,6 @@
             </GridContainer>
           </li>
         </ul>
-        <!-- <ul class="info-list">
-          <li>Se você não pode ver esta edição ao vivo, não tem problema! Todas as palestras ficarão gravadas no Youtube</li>
-          <li>Mas, assistir ao vivo te dá a possibilidade de perguntar diretamente para o palestrante (só dizendo 👀)</li>
-        </ul> -->
       </GridContainer>
     </GridContainer>
   </div>
