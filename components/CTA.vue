@@ -3,8 +3,10 @@
     <GridContainer direction="row" alignX="center" alignY="center">
       <div>
         <StyledButton
+          :clickFn="navigate('/criar-conta')"
           :styles="{
             padding: '20px',
+            backgroundColor: '#7a6d9a'
           }"
           :cta="true" text="Cadastre-se" />
       </div>
@@ -21,7 +23,7 @@ export default {
   components: { GridContainer, StyledButton },
   methods: {
     navigate(link) {
-      return window.open(link, '_blank');
+      return () => this.$router.push(link);
     },
   },
 };

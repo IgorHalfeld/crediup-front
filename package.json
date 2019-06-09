@@ -15,10 +15,12 @@
     "cross-env": "^5.2.0",
     "json2mq": "^0.2.0",
     "material-design-icons-iconfont": "^5.0.1",
+    "material-icons": "^0.3.1",
     "node-sass": "^4.12.0",
     "nuxt": "^2.4.0",
     "sass-loader": "^7.1.0",
-    "vue-glitch": "^1.0.1"
+    "vue-glitch": "^1.0.1",
+    "vuesax": "^3.8.74"
   },
   "devDependencies": {
     "nodemon": "^1.18.9"

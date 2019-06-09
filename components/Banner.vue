@@ -33,7 +33,9 @@
         Revolucionando o crédito no brasil
       </StyledSubTitle>
 
-      <StyledButton text="quero crédito!" />
+      <StyledButton
+        :clickFn="navigate('/criar-conta')"
+        text="quero crédito!" />
 
     </GridContainer>
   </div>
@@ -55,6 +57,11 @@ export default {
     StyledButton,
     BannerImageGlitch,
   },
+  methods: {
+    navigate(link) {
+      return () => this.$router.push(link);
+    },
+  }
 };
 </script>
 

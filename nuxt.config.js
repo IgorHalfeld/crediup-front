@@ -33,14 +33,15 @@ export default {
   /*
   ** Global CSS
   */
-  css: [
-  ],
+  css: ['~/assets/main.css'],
 
   /*
   ** Plugins to load before mounting the App
   */
   plugins: [
     { src: '~/plugins/vueMediaQueries', srr: false },
+    { src: '~/plugins/vuesax', srr: false },
+    { src: '~/plugins/icons', srr: false },
   ],
 
   /*

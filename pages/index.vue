@@ -15,9 +15,11 @@ import GridContainer from '@/components/Functional/GridContainer';
 import InfoSection from '@/components/InfoSection';
 import AdvantagesSection from '@/components/AdvantagesSection';
 import CTA from '@/components/CTA';
+import transitionHelper from '@/utils/transitionHelper';
 
 export default {
   name: 'Index',
+  transition: transitionHelper,
   components: {
     Banner,
     Footer,
