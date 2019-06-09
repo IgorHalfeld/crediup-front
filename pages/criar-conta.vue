@@ -53,6 +53,16 @@
         type="password"
       />
 
+      <p
+      :style="{
+        maxWidth: '500px',
+        marginTop: '60px',
+        fontSize: '1rem',
+      }">
+        Ao continuar você estará de acordo com os <br>
+        <i :style="{ textDecoration: 'underline' }">termos e condições</i> do LGPD.
+      </p>
+
       <StyledButton
         :isLoading="isLoading"
         :clickFn="navigate('/enviar-documentos')"
