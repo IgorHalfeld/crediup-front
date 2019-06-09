@@ -5,6 +5,7 @@ export const state = () => ({
     name: null,
     password: null,
   },
+  isLoading: false,
 });
 
 export const mutations = {
@@ -17,4 +18,7 @@ export const mutations = {
   setPassword(state, password) {
     state.user.password = password;
   },
+  setLoading(state, status) {
+    state.isLoading = status;
+  }
 };

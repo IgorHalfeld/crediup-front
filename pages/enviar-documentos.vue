@@ -32,7 +32,7 @@
           :style="{
             width: '100%',
           }"
-          multiple text="Upload Multiple"/>
+          multiple text="Faça o upload"/>
       </StyledField>
 
       <StyledField
@@ -40,13 +40,13 @@
           marginTop: '20px'
         }"
         :isRequired="true"
-        label="Notas fiscais"
+        label="Holerite"
       >
         <vsUpload
           :style="{
             width: '100%',
           }"
-          multiple text="Upload Multiple"/>
+          multiple text="Faça o upload"/>
       </StyledField>
 
       <StyledButton

@@ -1,16 +1,28 @@
-<template functional>
+<template>
   <button
     class="button"
     :class="{
-      'cta': !!props.cta
+      'cta': !!cta
     }"
     :style="{
-      ...props.styles,
+      ...styles,
     }"
-    @click="props.clickFn">
-      {{ props.text }}
+    @click="clickFn">
+      <Loader v-if="isLoading" size="30px"/>
+      <template v-else>
+        {{ text }}
+      </template>
     </button>
 </template>
+
+<script>
+import Loader from '@/components/Functional/Loader';
+
+export default {
+  components: { Loader },
+  props: ['cta', 'styles', 'clickFn', 'isLoading', 'text'],
+}
+</script>
 
 <style lang="scss" scoped>
 .button {

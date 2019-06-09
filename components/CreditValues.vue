@@ -9,7 +9,7 @@
       :styles="{
         fontSize: '4rem',
       }">
-      R$ 1.800,00
+      R$ {{ getCreditLimit }}
     </StyledTitle>
     <StyledSubTitle
       :styles="{
@@ -17,7 +17,7 @@
         fontSize: '1.5rem',
       }">
       Seu score é de
-      <strong :style="{ fontSize: '1.3rem', color: '#697398' }">3.4 pontos</strong>.
+      <strong :style="{ fontSize: '1.3rem', color: '#697398' }">{{ getScore }} pontos</strong>.
     </StyledSubTitle>
 
     <p
@@ -59,9 +59,19 @@ export default {
     StyledButton,
     Loader,
   },
+  computed: {
+    getCreditLimit() {
+      const number = (Math.random() * 1200).toFixed(2);
+      return number < 700
+        ? this.getCreditLimit
+        : number;
+    },
+    getScore() {
+      const number = (Math.random() * 5).toFixed(2);
+      return number < 2
+        ? this.getScore
+        : number;
+    }
+  }
 }
 </script>
-
-<style>
-
-</style>

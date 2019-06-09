@@ -50,7 +50,7 @@ export default {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     ['@nuxtjs/axios', {
-      baseURL: 'https://api.spacexdata.com/v3/',
+      baseURL: 'https://crediup.azurewebsites.net/api/',
     }],
   ],
   /*

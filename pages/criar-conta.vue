@@ -54,6 +54,7 @@
       />
 
       <StyledButton
+        :isLoading="isLoading"
         :clickFn="navigate('/enviar-documentos')"
         :styles="{
           marginTop: '50px',
@@ -78,12 +79,14 @@ export default {
   components: { GridContainer, StyledTitle, StyledField, StyledButton },
   computed: mapState({
     user: state => state.user,
+    isLoading: state => state.isLoading,
   }),
   methods: {
     ...mapMutations([
       'setEmail',
       'setName',
       'setPassword',
+      'setLoading',
     ]),
     validateFields() {
       const values = Object
@@ -91,8 +94,12 @@ export default {
         .map(value => !!value);
       return values.includes(false);
     },
+    async createUser() {
+      await this.$axios.$post('users', this.user);
+    },
     navigate(link) {
-      return () => {
+      return async () => {
+        this.setLoading(true);
         if (this.validateFields()) {
           this.$vs.notify({
             title: 'Opa!',
@@ -100,8 +107,17 @@ export default {
             color: 'warning',
             position: 'top-right',
           });
+          this.setLoading(false);
           return;
         }
+        await this.createUser();
+        this.$vs.notify({
+          title: 'Conta criada!',
+          text: 'Sua conta já foi criada :D',
+          color: 'success',
+          position: 'top-right',
+        });
+        this.setLoading(false);
         this.$router.push(link);
       }
     }
