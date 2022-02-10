@@ -16,7 +16,7 @@
     "json2mq": "^0.2.0",
     "material-design-icons-iconfont": "^5.0.1",
     "material-icons": "^0.3.1",
-    "node-sass": "^4.12.0",
+    "node-sass": "^7.0.0",
     "nuxt": "^2.4.0",
     "sass-loader": "^7.1.0",
     "vue-glitch": "^1.0.1",
